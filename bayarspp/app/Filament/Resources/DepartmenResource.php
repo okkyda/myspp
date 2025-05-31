@@ -32,7 +32,7 @@ class DepartmenResource extends Resource
                 Forms\Components\TextInput::make('cost')
                     ->required()
                     ->numeric()
-                    ->prefix('$'),
+                    ->prefix('Rp'),
             ]);
     }
 
@@ -46,7 +46,7 @@ class DepartmenResource extends Resource
                     ->numeric()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('cost')
-                    ->money()
+                    ->money('IDR')
                     ->sortable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
